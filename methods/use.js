@@ -1,4 +1,6 @@
 function override_use (app) {
+  // Save reference to native method
+  app._use = app.use
   return function (...args) {
     let path;
     if ( typeof args[0] === 'string' ) {
